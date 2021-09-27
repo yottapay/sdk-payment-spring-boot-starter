@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yotta.sdk</groupId>
-    <artifactId>yp-sdk-payment-spring-boot-starter</artifactId>
+    <artifactId>sdk-payment-spring-boot-starter</artifactId>
     <version>0.0.1</version>
     <name>Yotta Pay SDK (Payment Spring Boot Starter)</name>
 

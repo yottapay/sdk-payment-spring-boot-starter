@@ -1,0 +1,8 @@
+yotta-pay:
+  sdk:
+    payment:
+      base-url: 'localhost:8080'
+      merchant-identity: 'merchant-identity'
+      secret: 'secret'
+      endpoints:
+        create-payment: '/create-payment'

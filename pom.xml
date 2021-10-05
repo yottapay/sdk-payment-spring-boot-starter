@@ -28,7 +28,7 @@
         <dependency>
             <groupId>com.github.yottapay</groupId>
             <artifactId>sdk-payment</artifactId>
-            <version>master-SNAPSHOT</version>
+            <version>v1.0.0</version>
         </dependency>
 
         <dependency>

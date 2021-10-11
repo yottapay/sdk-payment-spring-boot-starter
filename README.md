@@ -91,6 +91,14 @@ yotta-pay.sdk.payment.merchant-identity='your_id'
 yotta-pay.sdk.payment.secret='your_secret'
 ```
 
+To test your code in sandbox, also add the following:
+```properties
+## important! No trailing slash
+yotta-pay.sdk.payment.base-url='https://sandbox.yottapay.co.uk/launcher'
+```
+
+When you are ready to go live, remove this line from configuration.
+
 Now you may use `YpSdkPayment` bean and inject it into your services.
 
 ### Creating orders for processing

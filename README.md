@@ -10,15 +10,14 @@ Yotta Pay® is the UK’s first ethical payment processor based on Open Banking 
 
 Yotta Pay® offers a three-click payment/authorisation via the client’s mobile banking app for your website or application.
 
-Yotta Pay® ethical payments™ are low cost, fast, secure, and require no plastic cards.
+Yotta Pay® ethical payments™ are low cost, fast, secure, and require no plastic.
 
 [More info](https://yottapay.co.uk)
 
 ## Our public SDKs:
 
 ### Client only SDK:
-
-Just Java libs to make integration on system on your choice
+Java libs to integrate with the system of your choice
 
 [Yotta Payment SDK](https://github.com/yottapay/sdk-payment)
 
@@ -36,7 +35,7 @@ Yotta Payment SDK Spring Boot Starter (You are here)
 
 ## Adding dependency
 
-We use [JitPack](https://jitpack.io) for binaries distribution
+We use [JitPack](https://jitpack.io) for the distribution of binaries
 
 ### Gradle
 
@@ -83,15 +82,15 @@ implementation 'com.github.yottapay:sdk-payment:v1.0.1'
 
 ### Configuration
 
-This intended to be used with Spring Boot autoconfiguration.
+This is intended to be used with Spring Boot autoconfiguration.
 
-Add to your `application.properties` following config:
+Add the following config to your `application.properties`:
 ```properties
 yotta-pay.sdk.payment.merchant-identity='your_id'
 yotta-pay.sdk.payment.secret='your_secret'
 ```
 
-To test your code in sandbox, also add the following:
+To test your code in the sandbox, add the following:
 ```properties
 ## important! No trailing slash
 yotta-pay.sdk.payment.base-url='https://sandbox.yottapay.co.uk/launcher'
@@ -99,7 +98,7 @@ yotta-pay.sdk.payment.base-url='https://sandbox.yottapay.co.uk/launcher'
 
 When you are ready to go live, remove this line from configuration.
 
-Now you may use `YpSdkPayment` bean and inject it into your services.
+Now you may use the `YpSdkPayment` bean and inject it into your services.
 
 ### Creating orders for processing
 ```
@@ -119,18 +118,18 @@ YpPaymentCreationResult result = sdkPayment.createPayment(payment);
         // redirect user to result.getUrlProcessPaymentIntent()
 ```
 
-Returned object (`YpPaymentCreationResult`) consists of two fields:
-`urlProcessPaymentIntent` - is URL for making payment. Redirect user to this URL.
-`yottaTransactionId` - Our transaction ID for this payment.
+The returned object (`YpPaymentCreationResult`) consists of two fields:
+`urlProcessPaymentIntent`,which is the payment URL that you redirect the user to
+`yottaTransactionId`, which is our transaction ID for the payment.
 
 Please notice that `currency` is restricted to `GBP`. `notificationId` is reserved and should be set to empty string and be not null.
 
 ### Handling webhooks
 
-Webhooks used to inform you that payment status has been changed.
+Webhooks are used to inform you that payment status has been changed.
 
-We will send you a `POST` request to URL you specified on `urlPaymentResult` during order creation.
-Callback body:
+We will send you a `POST` request to the URL you specified in `urlPaymentResult` during order creation.
+The callback body looks like this:
 ```json
 {
   "yottapay_transaction_identifier": "YPR-123",
@@ -147,9 +146,9 @@ Callback body:
 
 The following JSON body can be deserialized to `YpPaymentExecutionStatusChangedRequest` POJO.
 
-You **MUST** validate request's signature using `YpSdkPayment#checkSignature` method. It will return `false` if signature failed.
+You **MUST** validate the request's signature using `YpSdkPayment#checkSignature` method. It will return `false` if signature has failed.
 
-`response_code` states for payment processing result. If not `"0"` payment should be treated as `FAILED`
+`response_code` states the payment processing result. If isn't `"0"` the payment should be treated as `FAILED`
 
 
 ## Contact us

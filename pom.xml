@@ -16,7 +16,7 @@
         <spring.boot.version>2.4.4</spring.boot.version>
         <spring.version>5.3.9</spring.version>
     </properties>
-
+1
     <repositories>
         <repository>
             <id>jitpack.io</id>
@@ -28,7 +28,7 @@
         <dependency>
             <groupId>com.github.yottapay</groupId>
             <artifactId>sdk-payment</artifactId>
-            <version>v1.0.7</version>
+            <version>v1.0.8</version>
         </dependency>
 
         <dependency>

@@ -16,7 +16,7 @@
         <spring.boot.version>2.4.4</spring.boot.version>
         <spring.version>5.3.9</spring.version>
     </properties>
-1
+
     <repositories>
         <repository>
             <id>jitpack.io</id>

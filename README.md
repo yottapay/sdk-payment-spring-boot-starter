@@ -53,7 +53,7 @@ allprojects {
 2. Add the dependency
 ```groovy
 //...
-implementation 'com.github.yottapay:sdk-payment:v1.0.10'
+implementation 'com.github.yottapay:sdk-payment:v1.0.11'
 ```
 
 ### Maven
@@ -73,7 +73,7 @@ implementation 'com.github.yottapay:sdk-payment:v1.0.10'
 <dependency>
     <groupId>com.github.yottapay</groupId>
     <artifactId>sdk-payment</artifactId>
-    <version>v1.0.10</version>
+    <version>v1.0.11</version>
     <scope>compile</scope>
 </dependency>
 ```
